@@ -1,0 +1,154 @@
+/* App.css */
+:root {
+  --accent: #6E85B2;
+  --main: #261C2C;
+  --secondary: #FFEBD8;
+  --third: #3E2C41;
+}
+
+/* Global styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main);
+  color: var(--third);
+}
+
+/* Dark Mode / Light Mode button styles */
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--secondary);
+  color: var(--main);
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.mode-toggle:hover {
+  background-color: var(--third);
+  color: var(--secondary);
+}
+
+/* Header styles */
+.header {
+  background-color: var(--main);
+  color: var(--secondary);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Adjusted Schedule table styles */
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.schedule th,
+.schedule td {
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid var(--secondary);
+  height: 60px;
+  width: 100%;
+}
+
+.schedule th {
+  background-color: var(--secondary);
+  color: var(--main);
+}
+
+.schedule td input {
+  width: calc(100% - 10px);
+  /* Adjusted input width */
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--secondary);
+  color: var(--secondary);
+  font-size: 14px;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.schedule td input:focus {
+  outline: none;
+  border-bottom-color: var(--third);
+}
+
+/* Checkbox and Task Styles */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label input[type='checkbox'] {
+  display: none;
+}
+
+.checkbox-custom {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  border: 1px solid var(--third);
+  background-color: var(--secondary);
+  border-radius: 3px;
+}
+
+.checkbox-label input[type='checkbox']:checked~.checkbox-custom {
+  background-color: var(--accent);
+}
+
+.task-input {
+  padding-left: 10px;
+  border: none;
+  border-bottom: 1px solid var(--secondary);
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.task-input:focus {
+  outline: none;
+  border-bottom-color: var(--third);
+}
+
+.task-input.done {
+  text-decoration: line-through;
+  color: var(--accent);
+  pointer-events: none;
+  border-color: var(--accent);
+}
+
+#tasks-done {
+  color: var(--accent);
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+#tasks-done-nmb {
+  font-weight: bolder;
+}
+
+.pdf-btn {
+  margin-bottom: 30px;
+  width: 200px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--secondary);
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all 0.5s;
+}
+
+.pdf-btn:hover {
+  background: var(--accent);
+  color: var(--secondary);
+}
